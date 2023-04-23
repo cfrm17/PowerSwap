@@ -50,6 +50,11 @@ These might be additional external fees, different payment schedule conventions,
 
 Conditional on the delivery of electricity at the contract terms, where I1 is the spot price and I2 is charges payment (like Inbound charges). Thus one has an outstanding position in physical electricity.
 
-The question of how to evaluate such a contract, before maturity, arises. Meaning, what value to attach to the outstanding position in the electricity that you will later sell/buy, in order to evaluate the whole contract before maturity (see https://finpricing.com/lib/EqCallable.html ).
+The question of how to evaluate such a contract, before maturity, arises. Meaning, what value to attach to the outstanding position in the electricity that you will later sell/buy, in order to evaluate the whole contract before maturity.
 
 PWR-PHYS contracts are valuated as a swap of basket of indices, evaluating each buy/sell contract separately in the book (no matter of your buy/sell total portfolio strategy). Before maturity, the system treats the outstanding physical leg of the contract as another index (called POWER in the system). Before maturity this index is equal to the spot index at the point of delivery and after delivery the POWER index is set to 0. Thus the system assumes the entire portfolio of physical buy/sell contracts is balanced in terms of physical delivery at settlement time.
+
+Reference:
+
+https://finpricing.com/knowledge.html
+
